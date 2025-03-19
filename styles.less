@@ -1,0 +1,61 @@
+.weekday-tab {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.weekday-tab-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.weekday-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px 0;
+  flex: 1;
+  text-align: center;
+}
+
+.weekday-tab-label {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.weekday-tab-date {
+  font-size: 16px;
+  color: #999;
+  font-weight: normal;
+}
+
+.weekday-tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 24px;
+  background-color: #2196f3;
+  border-radius: 1px;
+}
+
+.weekday-tab-item.active {
+  .weekday-tab-label,
+  .weekday-tab-date {
+    color: #2196f3;
+    font-weight: 500;
+  }
+}
+
+.weekday-tab-item.today:not(.active) {
+  .weekday-tab-label {
+    color: #333;
+  }
+} 
